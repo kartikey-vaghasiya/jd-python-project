@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  {% load static %}
+  <h3 style="text-align:center; padding:30px; margin-bottom: 15px; font-size: 18px;">Analysis of given file</h3>
+
+  <div style="margin-inline: 10%; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-around; margin-top: 30px; margin-bottom:30px; font-family: 'Arial', sans-serif;">
+        <!-- Display the Pie Chart - Brand vs Average Prices -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Brand vs Average Prices</h3>
+        <a href="{% static 'brand_vs_avg_prices.png' %}" target="_blank">
+            <img src="{% static 'brand_vs_avg_prices.png' %}" alt="Brand vs Average Prices" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Brand vs Average Rating -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Brand vs Average Rating</h3>
+        <a href="{% static 'brand_vs_avg_rating.png' %}" target="_blank">
+            <img src="{% static 'brand_vs_avg_rating.png' %}" alt="Brand vs Average Rating" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Brand vs Average Reviews -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Brand vs Average Reviews</h3>
+        <a href="{% static 'brand_vs_avg_reviews.png' %}" target="_blank">
+            <img src="{% static 'brand_vs_avg_reviews.png' %}" alt="Brand vs Average Reviews" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Brand vs Mode Prices -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Brand vs Mode Prices</h3>
+        <a href="{% static 'brand_vs_mode_prices.png' %}" target="_blank">
+            <img src="{% static 'brand_vs_mode_prices.png' %}" alt="Brand vs Mode Prices" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Brand vs Mode Rating -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Brand vs Mode Rating</h3>
+        <a href="{% static 'brand_vs_mode_rating.png' %}" target="_blank">
+            <img src="{% static 'brand_vs_mode_rating.png' %}" alt="Brand vs Mode Rating" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Brand vs Mode Reviews -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Brand vs Mode Reviews</h3>
+        <a href="{% static 'brand_vs_mode_reviews.png' %}" target="_blank">
+            <img src="{% static 'brand_vs_mode_reviews.png' %}" alt="Brand vs Mode Reviews" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Correlation between Price and Ratings -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Correlation between Price and Ratings</h3>
+        <a href="{% static 'correlation_between_price_and_ratings.png' %}" target="_blank">
+            <img src="{% static 'correlation_between_price_and_ratings.png' %}" alt="Correlation between Price and Ratings" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Distribution of Prices -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Distribution of Prices</h3>
+        <a href="{% static 'distribution_of_prices.png' %}" target="_blank">
+            <img src="{% static 'distribution_of_prices.png' %}" alt="Distribution of Prices" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Top 10 Brand vs Price/Rating Ratios -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Top 10 Brand vs Price/Rating Ratios</h3>
+        <a href="{% static 'top_10_brand_vs_price_rating_ratios.png' %}" target="_blank">
+            <img src="{% static 'top_10_brand_vs_price_rating_ratios.png' %}" alt="Top 10 Brand vs Price/Rating Ratios" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Top 10 Costly Products -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Top 10 Costly Products</h3>
+        <a href="{% static 'top_10_costly_products.png' %}" target="_blank">
+            <img src="{% static 'top_10_costly_products.png' %}" alt="Top 10 Costly Products" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Top 10 Rated Products -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Top 10 Rated Products</h3>
+        <a href="{% static 'top_10_rated_products.png' %}" target="_blank">
+            <img src="{% static 'top_10_rated_products.png' %}" alt="Top 10 Rated Products" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+        <!-- Display the Pie Chart - Top 10 Reviewed Products -->
+        <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+        <h3 style="margin-bottom: 15px; font-size: 18px;">Top 10 Reviewed Products</h3>
+        <a href="{% static 'top_10_reviewed_products.png' %}" target="_blank">
+            <img src="{% static 'top_10_reviewed_products.png' %}" alt="Top 10 Reviewed Products" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </a>
+        </div>
+
+  </div>
+{% endblock %}

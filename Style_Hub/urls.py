@@ -22,7 +22,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('home.urls')),
     path('seller/',include('seller.urls')),
-    path('adminPanel/',include('adminPanel.urls'))
+    path('adminPanel/',include('adminPanel.urls')),
+    path('csv/', include('data_visulization.urls')),
 ]
 
 # Add a reference to MEDIA_URL for serving media files

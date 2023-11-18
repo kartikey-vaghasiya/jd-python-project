@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+{% block body %}
+  {% load static %}
+  <h3 style="text-align:center; padding:30px; margin-bottom: 15px; font-size: 18px;">Analysis of given file</h3>
+
+  <div style="margin-inline: 10%; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-around; margin-top: 30px; margin-bottom:30px; font-family: 'Arial', sans-serif;">
+    <!-- Display the Bar Chart - Cost -->
+    <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin-bottom: 15px; font-size: 18px;">Bar Chart - Cost</h3>
+      <a href="{% static 'bar_chart_cost.png' %}" target="_blank">
+        <img src="{% static 'bar_chart_cost.png' %}" alt="Bar Chart - Cost" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      </a>
+    </div>
+
+    <!-- Display the Bar Chart - Reviews -->
+    <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin-bottom: 15px; font-size: 18px;">Bar Chart - Reviews</h3>
+      <a href="{% static 'bar_chart_reviews.png' %}" target="_blank">
+        <img src="{% static 'bar_chart_reviews.png' %}" alt="Bar Chart - Reviews" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      </a>
+    </div>
+
+    <!-- Display the Bar Chart - Rating -->
+    <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin-bottom: 15px; font-size: 18px;">Bar Chart - Rating</h3>
+      <a href="{% static 'bar_chart_rating.png' %}" target="_blank">
+        <img src="{% static 'bar_chart_rating.png' %}" alt="Bar Chart - Rating" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      </a>
+    </div>
+
+    <!-- Display the Bar Chart - Cost vs Reviews -->
+    <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin-bottom: 15px; font-size: 18px;">Bar Chart - Cost vs Reviews</h3>
+      <a href="{% static 'bar_chart_cost_reviews.png' %}" target="_blank">
+        <img src="{% static 'bar_chart_cost_reviews.png' %}" alt="Bar Chart - Cost vs Reviews" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      </a>
+    </div>
+
+    <!-- Display the Bar Chart - Cost vs Rating -->
+    <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin-bottom: 15px; font-size: 18px;">Bar Chart - Cost vs Rating</h3>
+      <a href="{% static 'bar_chart_cost_rating.png' %}" target="_blank">
+        <img src="{% static 'bar_chart_cost_rating.png' %}" alt="Bar Chart - Cost vs Rating" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      </a>
+    </div>
+
+    <!-- Display the Pie Chart - Reviews -->
+    <div style="width: clamp(25rem, 45%, 35rem); padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+      <h3 style="margin-bottom: 15px; font-size: 18px;">Pie Chart - Reviews</h3>
+      <a href="{% static 'pie_chart_reviews.png' %}" target="_blank">
+        <img src="{% static 'pie_chart_reviews.png' %}" alt="Pie Chart - Reviews" style="width: 100%; cursor: pointer; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+      </a>
+    </div>
+  </div>
+{% endblock %}

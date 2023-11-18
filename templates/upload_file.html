@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div style="display: flex; align-items: center; justify-content: center; height: 100vh; background-color: #f2e0d7; padding: 2rem;">
+  <div style="text-align: center; background-color: #c8a491; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); width: 80%; display:flex; flex-direction: column; align-items:center;">
+    <h1 style="margin-top: 2rem; margin-bottom: 2rem; color: #6a4e4b; font-weight: bold;">CSV Chart Visualizer</h1>
+    <form method="post" enctype="multipart/form-data" style="max-width: 400px; width: 100%; margin-bottom: 2rem; padding: 1.5rem; border: 1px solid #8c6f66; border-radius: 5px; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+      {% csrf_token %}
+      <div style="padding:0.2rem; margin: 5px;">
+      {{ form.as_p }}
+      </div>
+      <button type="submit" style="background-color: #8c6f66; color: #fff; padding: 0.7rem 1.5rem; border: none; cursor: pointer; width: 100%; font-size: 1rem;"> Upload & Visulize csv </button>
+    </form>
+  </div>
+</div>
+{% endblock %}
